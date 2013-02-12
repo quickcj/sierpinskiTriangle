@@ -10,8 +10,8 @@
  *		L = left = (cx-2, by + y)
  */
 
-public class sierpinski_trinangle {
-	private double w, h, a, b, c, x, y, z;
+public class sierpinski_triangle {
+	private double w, h, a, b, x, y, z, cx, cy;
 	private int depth;
 	private Graphics g;
 
@@ -27,7 +27,7 @@ public class sierpinski_trinangle {
 	 * @param h = height of the triangle
 	 * @param d = depth of the triangle
 	 */
-	public sierpinski_trinangle (double w, double h) {
+	public sierpinski_triangle (double w, double h, double a, double b) {
 		this.w = w;
 		this.h = h;
 		this.depth=1;
@@ -59,10 +59,14 @@ public class sierpinski_trinangle {
 
 	public void recursiveDraw(int w, int h) {
 		x = .9*(Math.min(w/2, h/2));
-		c = (a+w/2, b+h/2);
-		double top = (cx, cy - x);
-		y = x math.sin(30);
+		cy = b+h/2;
+		cx = a+w/2;
+		Point c = Point(cx, cy);
+		Point top = (cx, (cy - x));
+		y = x*math.sin(30);
 		z = math.squareroot(math.pow(x) - math.pow(y));
+		Point right = ((cx + 2), cy + y);
+		Point left = ((cx - 2), (by + y);
 
 
 	}
